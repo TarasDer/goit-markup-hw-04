@@ -35,7 +35,7 @@ p {
 }
 
 img {
-   display: block;
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -67,10 +67,9 @@ body {
   margin: -1px;
 }
 
-
 /* -------------HEADER--------------- */
 /* ---------logo-------- */
-header{
+header {
   border-bottom: #ececec solid 1px;
 }
 
@@ -91,7 +90,7 @@ header .container {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
-  line-height: calc(36/26);
+  line-height: calc(36 / 26);
   letter-spacing: 0.03em;
 }
 
@@ -103,7 +102,7 @@ header .container {
 .site-nav {
   display: flex;
   gap: 50px;
-  margin-right: 344px;
+  margin-right: 318px;
 }
 
 .site-nav .link {
@@ -128,10 +127,27 @@ header .container {
   color: var(--accent-color);
 }
 
-.email {
-  display: block;
-  margin-right: 50px;
+.email-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
+
+.email {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.tel-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.tel {
+  display: flex;
+  align-items: center;
+}
+
 .email,
 .tel {
   text-decoration: none;
@@ -154,7 +170,16 @@ header .container {
 
 /* ---------Main-------- */
 .hero {
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: var(--secondary-background-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   color: var(--primary-white-color);
   text-align: center;
   padding-bottom: 200px;
@@ -190,7 +215,7 @@ header .container {
   margin-top: 30px;
 }
 
-.feauter-section{
+.feauter-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -203,12 +228,39 @@ header .container {
   text-transform: uppercase;
 }
 
-.feature-block{
+.feature-block {
   display: block;
   width: 270px;
 }
 
-.feature{
+.feature-block::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: var(--last-section-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/icons/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/icons/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/icons/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/icons/astronaut.svg);
+}
+
+.feature {
   display: flex;
   justify-content: space-between;
 }
@@ -227,22 +279,22 @@ header .container {
   letter-spacing: 0.03em;
 }
 
-.examples-section{
+.examples-section {
   padding-bottom: 94px;
 }
 
-.examples-section-title{margin-bottom: 50px;
-
+.examples-section-title {
+  margin-bottom: 50px;
 }
 
-.examples-list{
+.examples-list {
   display: flex;
   justify-content: space-between;
 }
 
 /* ---------Section Team-------- */
 
-.team-list{
+.team-list {
   display: flex;
   justify-content: space-between;
 }
@@ -253,21 +305,25 @@ header .container {
   padding-bottom: 94px;
 }
 
-.team-section-title{
+.team-section-title {
   margin-bottom: 50px;
 }
 
 .team .card {
   background-color: var(--primary-white-color);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.team-member{
+.team-member {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
 .team .team-title {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 19);
@@ -276,11 +332,80 @@ header .container {
 }
 
 .team .description {
+  margin-bottom: 16px;
   color: var(--description-text-color);
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #afb1b8;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--primary-white-color);
+  color: #afb1b8;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
+/* ---------Section Clients-------- */
+
+.clients-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: ;
+}
+
+.clients-section-title {
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+}
+
+.client-logo {
+  fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* ---------Footer-------- */
@@ -290,7 +415,12 @@ header .container {
   padding-bottom: 60px;
 }
 
-.footer-logo{
+.footer-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-logo {
   display: block;
   margin-bottom: 20px;
 }
@@ -319,7 +449,7 @@ footer .logo-second {
   color: var(--accent-color);
 }
 
-.address-email{
+.address-email {
   display: block;
   margin-bottom: 9px;
 }
@@ -334,14 +464,41 @@ footer .logo-second {
   letter-spacing: 0.03em;
 }
 
+.footer-address {
+  margin-right: 70px;
+}
+
+.footer-title {
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+}
+
+.footer-socials-item .socials-link {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-right: 10px;
+}
+
+.footer-socials-item .socials-link:hover {
+  background-color: var(--accent-color);
+}
+
 /* -----------------------Portfolio---------------------- */
 
-.portfolio-section{
+.portfolio-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.filters{
+.filters {
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -376,7 +533,7 @@ footer .logo-second {
   letter-spacing: 0.03em;
 }
 
-.works{
+.works {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -391,11 +548,11 @@ footer .logo-second {
   text-decoration: none;
 }
 
-.typeofworks{
+.typeofworks {
   padding: 20px 24px;
-  border-left:#EEEEEE solid 1px;
-  border-right:#EEEEEE solid 1px;
-  border-bottom:#EEEEEE solid 1px;
+  border-left: #eeeeee solid 1px;
+  border-right: #eeeeee solid 1px;
+  border-bottom: #eeeeee solid 1px;
 }
 
 .works .works-title {
