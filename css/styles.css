@@ -234,9 +234,10 @@ header .container {
   width: 270px;
 }
 
-.feature-block::before {
-  display: block;
-  content: "";
+.feature-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   background-color: var(--last-section-color);
   border-radius: 4px;
@@ -245,20 +246,10 @@ header .container {
   background-position: center;
 }
 
-.icon-antenna::before {
-  background-image: url(../images/icons/antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/icons/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/icons/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/icons/astronaut.svg);
+.feature-item-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature {
@@ -272,6 +263,8 @@ header .container {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
+/* ---------Examples-------- */
 
 .section-title {
   font-size: 36px;
@@ -558,7 +551,7 @@ footer .logo-second {
   width: 370px;
 }
 
-.card:hover {
+.works .card:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
